@@ -1,0 +1,29 @@
+port: 8095
+auth:
+  DAS: DAS84e18ce6660640f288d50a1ddee235fc
+  DAK: DAK9f118cdbb78e47778433be17a4d09357
+orchestration:
+  protocol: https
+  host: api-de.kandy.io
+  getSticker:
+    method: GET
+    path: /v1.3/users/contents/content/file
+  userCollections:
+    method: GET
+    path: /prp/v1.3/users/contents/collections
+  domainCollections:
+    method: GET
+    path: /prp/v1.3/domains/contents/collections
+  domainAccessToken:
+    method: GET
+    path: /prp/v1.3/domains/accesstokens
+  userDetails:
+    method: GET
+    path: /prp/v1.3/users/details/limited
+  associateCollection:
+    method: POST
+    path: /prp/v1.3/domains/users/contents/collections
+juanachat:
+  protocol: https
+  host: stickers.juanachat.com
+  brand: juanachat

@@ -1,0 +1,49 @@
+swagger: '2.0'
+info:
+  version: '1.0.0'
+  title: StickerStore
+host: 127.0.0.1
+basePath: /api
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /contents/{content_id}:
+    get:
+      tags:
+        - stickers
+  /purchase:
+    post:
+      tags:
+        - stickers
+      parameters:
+        - name: collection_id
+          in: formData
+          type: string
+          required: true
+  /user/collections:
+    post:
+      tags:
+        - kol
+    get:
+      tags:
+        - kol
+      parameters:
+        - name: key
+          in: query
+          type: string
+          required: true
+    put:
+      tags:
+        - kol
+  /domain/collections:
+    get:
+      tags:
+        - kol
+  /collections:
+    get:
+      tags:
+        - collections
